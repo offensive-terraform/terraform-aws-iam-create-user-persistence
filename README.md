@@ -10,27 +10,28 @@ Offensive Terraform module which creates an IAM user and an access key then atta
 
 ## Usage
 ```
-module "terraform-aws-iam-create-user-persistence" {
-    source  = "offensive-terraform/terraform-aws-iam-create-user-persistence/aws"
+module "iam-create-user-persistence" {
+  source  = "offensive-terraform/iam-create-user-persistence/aws"
+  version = "0.1.0"
 
-    user_name = "test"
-    policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
+  user_name  = "hack-the-planet"
+  policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
 }
 
 output "aws_iam_user" {
-  value = module.terraform-aws-iam-create-user-persistence.aws_iam_user
+  value = module.iam-create-user-persistence.aws_iam_user
 }
 
 output "aws_iam_user_policy_arn" {
-  value = module.terraform-aws-iam-create-user-persistence.aws_iam_user_policy_arn
+  value = module.iam-create-user-persistence.aws_iam_user_policy_arn
 }
 
 output "access_key" {
-  value = module.terraform-aws-iam-create-user-persistence.access_key
+  value = module.iam-create-user-persistence.access_key
 }
 
 output "secret_key" {
-  value = module.terraform-aws-iam-create-user-persistence.secret_key
+  value = module.iam-create-user-persistence.secret_key
 }
 ```
 ## Author
