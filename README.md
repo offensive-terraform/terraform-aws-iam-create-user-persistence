@@ -4,7 +4,7 @@
 ![OffensiveTerraform](https://img.shields.io/badge/offensive-terraform-blueviolet)
 ![OffensiveTerraform](https://img.shields.io/badge/aws-important)
 
-Offensive Terraform module which creates IAM user, access key then attaches managed IAM Policy to an IAM user.
+Offensive Terraform module which creates an IAM user and an access key then attaches managed IAM Policy to an IAM user.
 
 ![Attack Diagram](https://raw.githubusercontent.com/offensive-terraform/terraform-aws-iam-create-user-persistence/master/diagram.jpg)
 
